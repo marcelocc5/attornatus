@@ -15,6 +15,6 @@ public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
 
 	Optional<Pessoa> findByNome (String nome);
 
-	@Query(value = "SELECT p.enderecoprincipal,enderecos FROM pessoas p WHERE p.id =:id", nativeQuery = true)
+	@Query(value = "SELECT p.enderecoprincipal,enderecos FROM pessoa p WHERE p.id =:id", nativeQuery = true)
 	List<Endereco> findAllEnderecos(Long id);
 }
